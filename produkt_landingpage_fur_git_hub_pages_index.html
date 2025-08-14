@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dein Produkt – Einfach, klar, überzeugend</title>
+  <meta name="description" content="Präsentiere dein Produkt klar und überzeugend. Eine schnelle, moderne One‑Page Website ohne Build‑Tools." />
+  <meta property="og:title" content="Dein Produkt" />
+  <meta property="og:description" content="Präsentiere dein Produkt klar und überzeugend." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Dein+Produkt" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230ea5e9'/%3E%3Ctext x='32' y='38' font-size='28' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EP%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #0f172a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #0ea5e9;
+      --accent: #22d3ee;
+      --ok: #22c55e;
+      --warn: #f59e0b;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.5);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(34, 211, 238, 0.15), transparent),
+                  radial-gradient(900px 600px at 10% 0%, rgba(14, 165, 233, 0.2), transparent),
+                  var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(11, 18, 32, 0.6);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .2px; }
+    .brand-badge { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), var(--accent)); display: grid; place-items: center; box-shadow: var(--shadow); }
+    .brand-badge span { color: #fff; font-weight: 800; }
+
+    .menu { display: flex; gap: 20px; align-items: center; }
+    .menu a { color: var(--text); opacity: .9; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; border-radius: 999px; font-weight: 600; border: 1px solid transparent; transition: transform .06s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--brand), var(--accent)); color: white; box-shadow: var(--shadow); }
+    .btn-ghost { color: var(--text); border-color: rgba(148,163,184,.25); background: rgba(15, 23, 42, 0.5); }
+
+    .hero { padding: 80px 0 40px; text-align: center; }
+    .eyebrow { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(34, 211, 238, .12); color: var(--accent); font-weight: 700; letter-spacing: .3px; border: 1px solid rgba(34,211,238,.3); }
+    h1 { font-size: clamp(34px, 5vw, 60px); line-height: 1.05; margin: 16px 0 12px; }
+    .lead { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); max-width: 850px; margin: 0 auto 22px; }
+    .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+
+    .hero-media { margin: 28px auto 0; max-width: 980px; border-radius: var(--radius); overflow: hidden; background: linear-gradient(180deg, rgba(148,163,184,.15), transparent); border: 1px solid rgba(148,163,184,.2); box-shadow: var(--shadow); }
+    .hero-media img { width: 100%; display: block; }
+
+    .section { padding: 56px 0; }
+    .grid { display: grid; gap: 18px; }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 860px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+
+    .card { background: linear-gradient(180deg, rgba(15,23,42,.7), rgba(15,23,42,.5)); border: 1px solid rgba(148,163,184,.2); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+    .kicker { color: var(--accent); font-weight: 700; letter-spacing: .3px; }
+    h2 { font-size: clamp(24px, 3.5vw, 34px); margin: 0 0 8px; }
+    .muted { color: var(--muted); }
+
+    .price {
+      display: grid; gap: 20px; align-items: start;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media (max-width: 1000px) { .price { grid-template-columns: 1fr; } }
+    .price-plan { padding: 28px; border-radius: var(--radius); border: 1px solid rgba(148, 163, 184, .25); background: linear-gradient(180deg, rgba(34, 211, 238, 0.1), rgba(14,165,233,0.05)); }
+    .price-plan h3 { margin: 0 0 6px; }
+    .price-tag { font-size: 36px; font-weight: 800; }
+    .check { color: var(--ok); font-weight: 700; }
+
+    .faq details { border: 1px solid rgba(148, 163, 184, .25); border-radius: var(--radius); padding: 14px 18px; background: rgba(15, 23, 42, 0.6); }
+    .faq summary { cursor: pointer; font-weight: 600; }
+
+    footer { padding: 40px 0 80px; color: var(--muted); text-align: center; }
+    .small { font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge"><span>P</span></div>
+        <span>Dein Produkt</span>
+      </div>
+      <nav class="menu small">
+        <a href="#features">Features</a>
+        <a href="#preis">Preis</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn btn-primary" href="#kaufen">Jetzt kaufen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="eyebrow">Neu & einfach</span>
+      <h1>Präsentiere dein Produkt in Minuten</h1>
+      <p class="lead">Diese schnelle One‑Page Vorlage hilft dir, dein Produkt klar zu zeigen: Nutzen, Features, Preis und Kontakt – alles auf einer Seite, ohne Build‑Tools, bereit für GitHub Pages.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#kaufen">Jetzt testen</a>
+        <a class="btn btn-ghost" href="#features">Mehr erfahren</a>
+      </div>
+      <div class="hero-media">
+        <img src="https://via.placeholder.com/1600x900.png?text=Screenshot+oder+Produktfoto" alt="Produkt Vorschau" />
+      </div>
+    </section>
+
+    <section id="features" class="section container">
+      <h2>Warum dieses Produkt?</h2>
+      <p class="muted">Ersetze die Texte unten durch deinen konkreten Nutzen. Kurz, klar, messbar.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="kicker">Schnell startklar</div>
+          <h3>In 5 Minuten live</h3>
+          <p>Keine Installation, kein Build. Datei hochladen, GitHub Pages aktivieren – fertig.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Klarer Fokus</div>
+          <h3>Nur das Wesentliche</h3>
+          <p>Ein Hero, drei Features, Preis, FAQ und Kontakt – genau das, was verkauft.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Schoen auf allen Geraeten</div>
+          <h3>Responsives Design</h3>
+          <p>Funktioniert auf Handy, Tablet und Desktop. Keine extra Arbeit noetig.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="grid grid-2">
+        <div class="card">
+          <h2>Kundinnen & Kunden lieben es</h2>
+          <p class="muted">Kurze Testimonials geben Social Proof. Bitte nur echte Stimmen verwenden.</p>
+          <blockquote class="small">„Hat unseren Prozess um 40% beschleunigt. Klare Empfehlung.“ – Lena, Projektleiterin</blockquote>
+          <blockquote class="small">„Endlich einfach. Spart Zeit und Nerven.“ – Marco, Gründer</blockquote>
+        </div>
+        <div class="card">
+          <h2>Galerie</h2>
+          <p class="muted">Drei Bilder reichen oft. Zeig das Produkt im Einsatz.</p>
+          <div class="grid grid-3">
+            <img src="https://via.placeholder.com/400x260.png?text=Bild+1" alt="Bild 1" class="card" />
+            <img src="https://via.placeholder.com/400x260.png?text=Bild+2" alt="Bild 2" class="card" />
+            <img src="https://via.placeholder.com/400x260.png?text=Bild+3" alt="Bild 3" class="card" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preis" class="section container">
+      <h2>Ein klarer Preis</h2>
+      <p class="muted">Du kannst auch Monats- und Jahrespreis anbieten. Bei Bedarf ein Testpaket.</p>
+      <div class="price">
+        <div class="price-plan">
+          <h3>Starter</h3>
+          <div class="price-tag">CHF 29</div>
+          <p class="muted">Einmalig, alles drin.</p>
+          <ul>
+            <li><span class="check">✓</span> Alle Kernfeatures</li>
+            <li><span class="check">✓</span> E‑Mail Support</li>
+            <li><span class="check">✓</span> 30 Tage Geld zurueck</li>
+          </ul>
+          <p><a class="btn btn-primary" id="kaufen" href="mailto:dein.name@example.com?subject=Kaufanfrage%20Produkt">Jetzt kaufen</a></p>
+        </div>
+        <div class="price-plan">
+          <h3>Pro</h3>
+          <div class="price-tag">CHF 9/Monat</div>
+          <p class="muted">Mehr Leistung & schneller Support.</p>
+          <ul>
+            <li><span class="check">✓</span> Alles aus Starter</li>
+            <li><span class="check">✓</span> Priorisierter Support</li>
+            <li><span class="check">✓</span> Erweiterte Funktionen</li>
+          </ul>
+          <p><a class="btn btn-ghost" href="mailto:dein.name@example.com?subject=Pro%20Anfrage">Pro anfragen</a></p>
+        </div>
+        <div class="price-plan">
+          <h3>Enterprise</h3>
+          <div class="price-tag">Auf Anfrage</div>
+          <p class="muted">Massgeschneidert fuers Team.</p>
+          <ul>
+            <li><span class="check">✓</span> Onboarding</li>
+            <li><span class="check">✓</span> SLA</li>
+            <li><span class="check">✓</span> Individuelle Features</li>
+          </ul>
+          <p><a class="btn btn-ghost" href="mailto:dein.name@example.com?subject=Enterprise%20Anfrage">Gespräch starten</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Wie installiere ich das Produkt?</summary>
+        <p>Gar nicht. Du laedst es herunter und legst los. Keine Abhaengigkeiten.</p>
+      </details>
+      <details>
+        <summary>Gibt es eine Testversion?</summary>
+        <p>Ja, 7 Tage kostenlos. Schreib uns einfach eine E‑Mail.</p>
+      </details>
+      <details>
+        <summary>Welche Zahlungsmethoden bietet ihr an?</summary>
+        <p>Kreditkarte, Rechnung, Twint.</p>
+      </details>
+    </section>
+
+    <section id="kontakt" class="section container">
+      <div class="card">
+        <h2>Kontakt</h2>
+        <p class="muted">Fragen? Schreib uns direkt per E‑Mail oder nutze das Formular.</p>
+        <p><strong>E‑Mail:</strong> <a href="mailto:dein.name@example.com">dein.name@example.com</a></p>
+        <form class="grid grid-2" action="https://formspree.io/f/your-id" method="POST">
+          <input name="name" placeholder="Dein Name" required style="padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:rgba(15,23,42,.4);color:var(--text)" />
+          <input name="email" type="email" placeholder="E‑Mail" required style="padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:rgba(15,23,42,.4);color:var(--text)" />
+          <textarea name="nachricht" placeholder="Deine Nachricht" rows="4" required style="grid-column:1/-1;padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:rgba(15,23,42,.4);color:var(--text)"></textarea>
+          <button class="btn btn-primary" type="submit">Senden</button>
+        </form>
+        <p class="small muted">Hinweis: Ersetze die Formspree‑URL oben mit deiner eigenen oder nutze mailto‑Links.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container small">
+      <div>© <span id="year"></span> Dein Unternehmen. Alle Rechte vorbehalten.</div>
+      <div class="small">Impressum · Datenschutz</div>
+    </div>
+  </footer>
+
+  <script>
+    // aktuelles Jahr
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
