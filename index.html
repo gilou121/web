@@ -3,78 +3,166 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produktname – Offizielle Seite</title>
-  <meta name="description" content="Kurze Beschreibung deines physischen Produkts mit Foto und einfachem Kontaktformular bei Interesse." />
-  <meta property="og:title" content="Produktname" />
-  <meta property="og:description" content="Kurze Beschreibung, Foto, Kontaktformular bei Interesse." />
+  <title>Weingut Sonnental – Offizielle Seite</title>
+  <meta name="description" content="Entdecke charakterstarke Weine aus nachhaltigem Anbau. Direkt vom Weingut bestellen." />
+  <meta property="og:title" content="Weingut Sonnental" />
+  <meta property="og:description" content="Charakterstarke Weine aus nachhaltigem Anbau. Direkt vom Weingut." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Produktname" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230ea5e9'/%3E%3Ctext x='32' y='38' font-size='28' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EP%3C/text%3E%3C/svg%3E" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Weingut+Sonnental" />
+  <meta name="theme-color" content="#6b0f1a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236b0f1a'/%3E%3Cpath d='M24 22c0-5 4-9 8-9s8 4 8 9c0 6-6 9-8 14-2-5-8-8-8-14z' fill='%23c9a66b'/%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0b1220; --card: #0f172a; --text: #e5e7eb; --muted: #9ca3af; --brand: #0ea5e9; --accent: #22d3ee; --ok:#22c55e; --radius:16px; --shadow:0 10px 30px rgba(2,6,23,.5);
+    :root{
+      --bg:#12090c;
+      --card:#1b0e12;
+      --text:#f3f4f6;
+      --muted:#c7c7c7;
+      --brand:#6b0f1a;   /* Bordeaux */
+      --accent:#c9a66b;  /* Gold */
+      --ok:#22c55e;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.5);
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,.15), transparent), radial-gradient(900px 600px at 10% 0%, rgba(14,165,233,.2), transparent), var(--bg); line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Lora, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 85% -10%, rgba(201,166,107,.12), transparent),
+        radial-gradient(900px 600px at 10% 0%, rgba(107,15,26,.25), transparent),
+        var(--bg);
+      line-height:1.6;
+    }
+    h1,h2,h3{font-family:"Playfair Display", serif; letter-spacing:.2px}
+    a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(11,18,32,.6);border-bottom:1px solid rgba(148,163,184,.15)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-    .brand-badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;box-shadow:var(--shadow)}
-    .brand-badge span{color:#fff;font-weight:800}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;font-weight:600;border:1px solid transparent;transition:transform .06s ease, box-shadow .2s ease}
+
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:blur(8px);
+      background:rgba(18,9,12,.7);
+      border-bottom:1px solid rgba(201,166,107,.25);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .brand-badge{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--brand),#8e1a2a); display:grid; place-items:center; box-shadow:var(--shadow)}
+    .brand-badge span{color:#fff; font-weight:800}
+    .menu{display:flex; gap:18px; align-items:center}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 18px; border-radius:999px; font-weight:600; border:1px solid transparent; transition:transform .06s ease, box-shadow .2s ease}
     .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;box-shadow:var(--shadow)}
-    .btn-ghost{color:var(--text);border-color:rgba(148,163,184,.25);background:rgba(15,23,42,.5)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),#8e1a2a); color:#fff; box-shadow:var(--shadow); border-color:rgba(201,166,107,.35)}
+    .btn-ghost{color:var(--text); border:1px solid rgba(201,166,107,.35); background:rgba(27,14,18,.6)}
+
+    .hero{padding:80px 0 40px; text-align:center}
+    .eyebrow{display:inline-block; padding:6px 12px; border-radius:999px; background:rgba(201,166,107,.15); color:var(--accent); font-weight:700; border:1px solid rgba(201,166,107,.35)}
+    h1{font-size:clamp(34px,5vw,60px); line-height:1.05; margin:16px 0 12px}
+    .lead{font-size:clamp(16px,2.5vw,20px); color:var(--muted); max-width:850px; margin:0 auto 22px}
+    .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+    .hero-media{margin:28px auto 0; max-width:980px; border-radius:var(--radius); overflow:hidden; background:linear-gradient(180deg, rgba(201,166,107,.15), transparent); border:1px solid rgba(201,166,107,.25); box-shadow:var(--shadow)}
+    .hero-media img{width:100%; display:block}
+
     .section{padding:56px 0}
-    .grid{display:grid;gap:18px}
+    .grid{display:grid; gap:18px}
     .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width: 860px){.grid-2{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg, rgba(15,23,42,.7), rgba(15,23,42,.5)); border:1px solid rgba(148,163,184,.2); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
-    h1{font-size:clamp(30px,5vw,48px);margin:10px 0 8px}
-    h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 8px}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:860px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg, rgba(27,14,18,.9), rgba(27,14,18,.6)); border:1px solid rgba(201,166,107,.25); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .kicker{color:var(--accent); font-weight:700; letter-spacing:.3px}
+    h2{font-size:clamp(24px,3.5vw,34px); margin:0 0 8px}
     .muted{color:var(--muted)}
-    .hero-img{width:100%;height:auto;border-radius:var(--radius);border:1px solid rgba(148,163,184,.25);background:#0f172a}
-    footer{padding:40px 0 80px;color:var(--muted);text-align:center}
-    .small{font-size:14px}
-    input, textarea{padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:rgba(15,23,42,.4);color:var(--text)}
+
+    .price{display:grid; gap:20px; align-items:start; grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:1000px){.price{grid-template-columns:1fr}}
+    .price-plan{padding:28px; border-radius:var(--radius); border:1px solid rgba(201,166,107,.35); background:linear-gradient(180deg, rgba(107,15,26,.15), rgba(27,14,18,.6))}
+    .price-plan h3{margin:0 0 6px}
+    .price-tag{font-size:32px; font-weight:800}
+    .check{color:var(--ok); font-weight:700}
+
+    .faq details{border:1px solid rgba(201,166,107,.35); border-radius:var(--radius); padding:14px 18px; background:rgba(27,14,18,.7)}
+    .faq summary{cursor:pointer; font-weight:600}
+
+    input,textarea{padding:12px; border-radius:12px; border:1px solid rgba(201,166,107,.35); background:rgba(27,14,18,.5); color:var(--text)}
+    label{font-weight:600; margin-bottom:6px; display:block}
     form .grid-2{grid-template-columns:1fr 1fr}
-    @media (max-width: 860px){form .grid-2{grid-template-columns:1fr}}
-    label{font-weight:600;margin-bottom:6px;display:block}
+    @media (max-width:860px){form .grid-2{grid-template-columns:1fr}}
+
+    footer{padding:40px 0 80px; color:var(--muted); text-align:center}
+    .small{font-size:14px}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <div class="brand">
-        <div class="brand-badge"><span>P</span></div>
-        <span>Produktname</span>
+        <div class="brand-badge"><span>W</span></div>
+        <span>Weingut Sonnental</span>
       </div>
-      <nav class="small">
+      <nav class="menu small">
+        <a href="#weine">Weine</a>
+        <a href="#pakete">Pakete</a>
         <a href="#details">Details</a>
-        <a href="#kontakt" class="btn btn-primary">Interesse</a>
+        <a href="#kontakt" class="btn btn-primary">Kontakt</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO: Foto + Kurzbeschreibung -->
+    <!-- HERO -->
+    <section class="hero container">
+      <span class="eyebrow">Neu im Sortiment</span>
+      <h1>Elegante Weine mit klarer Handschrift</h1>
+      <p class="lead">Unsere Weine verbinden reife Frucht, Balance und Laenge. Nachhaltig angebaut, schonend ausgebaut, direkt ab Hof bestellbar.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#weine">Jetzt entdecken</a>
+        <a class="btn btn-ghost" href="#pakete">Degustationspakete</a>
+      </div>
+      <div class="hero-media">
+        <img src="https://via.placeholder.com/1600x900.png?text=Weinberge+und+Keller" alt="Weinberge und Fasskeller">
+      </div>
+    </section>
+
+    <!-- WEINE / FEATURES -->
+    <section id="weine" class="section container">
+      <h2>Unsere Weine</h2>
+      <p class="muted">Ausgewählte Lagen, sorgfaeltige Handlese, praezise Vinifikation.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="kicker">Pinot Noir</div>
+          <h3>2022 Reserve</h3>
+          <p>Saftige Kirsche, feine Würze, seidiges Tannin. 12 Monate im Holzfass gereift.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Riesling-Sylvaner</div>
+          <h3>2023 Classic</h3>
+          <p>Frische Zitrusnoten, grüner Apfel, lebendige Saeure. Ideal als Aperitif.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Cuvée</div>
+          <h3>Barrique</h3>
+          <p>Dunkle Beeren, Kakao, lange Struktur. Perfekt zu Fleisch und Kaese.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BILD + STORY -->
     <section class="section container">
       <div class="grid grid-2">
         <div>
-          <!-- TODO: Ersetze das Bild durch /assets/produkt.jpg -->
-          <img class="hero-img" src="https://via.placeholder.com/900x600.png?text=Produktfoto" alt="Produktfoto von Produktname" />
+          <img class="hero-media" src="https://via.placeholder.com/1200x800.png?text=Flaschen+und+Glas" alt="Flaschen und Glas">
         </div>
         <div class="card">
-          <h1>Produktname</h1>
-          <p class="muted">1–2 Saetze, was es ist und fuer wen: z.B. „Robuste, handliche Loesung fuer den Alltag. Entwickelt in der Schweiz, sofort einsatzbereit.“</p>
+          <div class="kicker">Handwerk</div>
+          <h2>Vom Rebstock bis ins Glas</h2>
+          <p class="muted">Schonende Handlese, Gravitation statt Pumpen, lange Hefelagerung. Wir arbeiten ressourcenschonend und transparent.</p>
           <ul>
-            <li>Hauptnutzen 1 in einem kurzen Satz.</li>
-            <li>Hauptnutzen 2 mit klarem Vorteil.</li>
-            <li>Hauptnutzen 3, messbar wenn moeglich.</li>
+            <li>Rebsortenrein oder als praezise Cuvées</li>
+            <li>Spontangaerung, minimaler Schwefel</li>
+            <li>Vegane Klärung, unbehandelt im Geschmack</li>
           </ul>
           <p>
             <a class="btn btn-primary" href="#kontakt">Interesse? Kontakt aufnehmen</a>
@@ -84,156 +172,43 @@
       </div>
     </section>
 
-    <!-- DETAILS -->
-    <section id="details" class="section container">
-      <div class="card">
-        <h2>Details</h2>
-        <p class="muted">Ersetze diesen Abschnitt mit den wichtigsten Fakten: Material, Groesse, Gewicht, Varianten, Lieferumfang, Garantie.</p>
-        <ul>
-          <li>Material: …</li>
-          <li>Abmessungen/Gewicht: …</li>
-          <li>Farben/Varianten: …</li>
-          <li>Lieferumfang: …</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- KONTAKTFORMULAR BEI INTERESSE -->
-    <section id="kontakt" class="section container">
-      <div class="card">
-        <h2>Interesse? Melde dich</h2>
-        <p class="muted">Schreib uns eine kurze Nachricht. Wir melden uns so schnell wie moeglich.</p>
-        <!-- Tipp: Ersetze die Formspree‑URL unten mit deiner eigenen. Alternativ kannst du auch einen mailto‑Link verwenden. -->
-        <form action="https://formspree.io/f/your-id" method="POST">
-          <div class="grid grid-2">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" placeholder="Dein Name" required />
-            </div>
-            <div>
-              <label for="email">E‑Mail</label>
-              <input id="email" name="email" type="email" placeholder="name@beispiel.ch" required />
-            </div>
-          </div>
-          <div class="grid grid-2">
-            <div>
-              <label for="telefon">Telefon (optional)</label>
-              <input id="telefon" name="telefon" placeholder="+41 79 123 45 67" />
-            </div>
-            <div>
-              <label for="menge">Stueckzahl (optional)</label>
-              <input id="menge" name="menge" type="number" min="1" placeholder="1" />
-            </div>
-          </div>
-          <div>
-            <label for="nachricht">Nachricht</label>
-            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Kurz beschreiben, wofuer du dich interessierst" required></textarea>
-          </div>
-          <div style="margin:10px 0">
-            <label class="small"><input type="checkbox" name="einwilligung" required /> Ich bin einverstanden, dass meine Angaben zur Kontaktaufnahme gespeichert werden.</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Nachricht senden</button>
-          <p class="small muted">Oder direkt per E‑Mail: <a href="mailto:dein.name@example.com?subject=Anfrage%20zu%20Produktname">dein.name@example.com</a></p>
-          <p class="small muted">Optional: <a href="https://wa.me/41790000000" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container small">
-      <div>© <span id="year"></span> Dein Unternehmen. Alle Rechte vorbehalten.</div>
-      <div class="small">Impressum · Datenschutz</div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="de-CH">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produktname – Offizielle Seite</title>
-  <meta name="description" content="Kurze Beschreibung deines physischen Produkts mit Foto und einfachem Kontaktformular bei Interesse." />
-  <meta property="og:title" content="Produktname" />
-  <meta property="og:description" content="Kurze Beschreibung, Foto, Kontaktformular bei Interesse." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Produktname" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230ea5e9'/%3E%3Ctext x='32' y='38' font-size='28' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EP%3C/text%3E%3C/svg%3E" />
-  <style>
-    :root {
-      --bg: #0b1220; --card: #0f172a; --text: #e5e7eb; --muted: #9ca3af; --brand: #0ea5e9; --accent: #22d3ee; --ok:#22c55e; --radius:16px; --shadow:0 10px 30px rgba(2,6,23,.5);
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,.15), transparent), radial-gradient(900px 600px at 10% 0%, rgba(14,165,233,.2), transparent), var(--bg); line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(11,18,32,.6);border-bottom:1px solid rgba(148,163,184,.15)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-    .brand-badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;box-shadow:var(--shadow)}
-    .brand-badge span{color:#fff;font-weight:800}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;font-weight:600;border:1px solid transparent;transition:transform .06s ease, box-shadow .2s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;box-shadow:var(--shadow)}
-    .btn-ghost{color:var(--text);border-color:rgba(148,163,184,.25);background:rgba(15,23,42,.5)}
-    .section{padding:56px 0}
-    .grid{display:grid;gap:18px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width: 860px){.grid-2{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg, rgba(15,23,42,.7), rgba(15,23,42,.5)); border:1px solid rgba(148,163,184,.2); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
-    h1{font-size:clamp(30px,5vw,48px);margin:10px 0 8px}
-    h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 8px}
-    .muted{color:var(--muted)}
-    .hero-img{width:100%;height:auto;border-radius:var(--radius);border:1px solid rgba(148,163,184,.25);background:#0f172a}
-    footer{padding:40px 0 80px;color:var(--muted);text-align:center}
-    .small{font-size:14px}
-    input, textarea{padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.25);background:rgba(15,23,42,.4);color:var(--text)}
-    form .grid-2{grid-template-columns:1fr 1fr}
-    @media (max-width: 860px){form .grid-2{grid-template-columns:1fr}}
-    label{font-weight:600;margin-bottom:6px;display:block}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="brand-badge"><span>P</span></div>
-        <span>Produktname</span>
-      </div>
-      <nav class="small">
-        <a href="#details">Details</a>
-        <a href="#kontakt" class="btn btn-primary">Interesse</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO: Foto + Kurzbeschreibung -->
-    <section class="section container">
-      <div class="grid grid-2">
-        <div>
-          <!-- TODO: Ersetze das Bild durch /assets/produkt.jpg -->
-          <img class="hero-img" src="https://via.placeholder.com/900x600.png?text=Produktfoto" alt="Produktfoto von Produktname" />
-        </div>
-        <div class="card">
-          <h1>Produktname</h1>
-          <p class="muted">1–2 Saetze, was es ist und fuer wen: z.B. „Robuste, handliche Loesung fuer den Alltag. Entwickelt in der Schweiz, sofort einsatzbereit.“</p>
+    <!-- PAKETE / PREISE -->
+    <section id="pakete" class="section container">
+      <h2>Pakete und Preise</h2>
+      <p class="muted">Alle Preise inkl. MwSt., zuzüglich Versand. Ab Hof Abholung moeglich.</p>
+      <div class="price">
+        <div class="price-plan">
+          <h3>Degustation</h3>
+          <div class="price-tag">CHF 49</div>
+          <p class="muted">3 Flaschen zum Kennenlernen.</p>
           <ul>
-            <li>Hauptnutzen 1 in einem kurzen Satz.</li>
-            <li>Hauptnutzen 2 mit klarem Vorteil.</li>
-            <li>Hauptnutzen 3, messbar wenn moeglich.</li>
+            <li><span class="check">✓</span> Pinot Noir Classic</li>
+            <li><span class="check">✓</span> Riesling-Sylvaner</li>
+            <li><span class="check">✓</span> Cuvée</li>
           </ul>
-          <p>
-            <a class="btn btn-primary" href="#kontakt">Interesse? Kontakt aufnehmen</a>
-            <a class="btn btn-ghost" href="#details">Mehr Details</a>
-          </p>
+          <p><a class="btn btn-primary" href="mailto:weingut@example.com?subject=Bestellung%20Degustation">Jetzt bestellen</a></p>
+        </div>
+        <div class="price-plan">
+          <h3>Reserve Paket</h3>
+          <div class="price-tag">CHF 129</div>
+          <p class="muted">6 Flaschen für besondere Momente.</p>
+          <ul>
+            <li><span class="check">✓</span> 2x Pinot Noir Reserve</li>
+            <li><span class="check">✓</span> 2x Cuvée Barrique</li>
+            <li><span class="check">✓</span> 2x Riesling-Sylvaner</li>
+          </ul>
+          <p><a class="btn btn-ghost" href="mailto:weingut@example.com?subject=Bestellung%20Reserve">Anfragen</a></p>
+        </div>
+        <div class="price-plan">
+          <h3>Gastronomie</h3>
+          <div class="price-tag">Auf Anfrage</div>
+          <p class="muted">Individuelle Konditionen für die Gastronomie.</p>
+          <ul>
+            <li><span class="check">✓</span> Jahrgangsliste</li>
+            <li><span class="check">✓</span> Musterflaschen</li>
+            <li><span class="check">✓</span> Schulung vor Ort</li>
+          </ul>
+          <p><a class="btn btn-ghost" href="mailto:weingut@example.com?subject=Gastro%20Anfrage">Gespräch starten</a></p>
         </div>
       </div>
     </section>
@@ -242,22 +217,39 @@
     <section id="details" class="section container">
       <div class="card">
         <h2>Details</h2>
-        <p class="muted">Ersetze diesen Abschnitt mit den wichtigsten Fakten: Material, Groesse, Gewicht, Varianten, Lieferumfang, Garantie.</p>
+        <p class="muted">Transparente Angaben zu Herkunft, Ausbau und Allergenen.</p>
         <ul>
-          <li>Material: …</li>
-          <li>Abmessungen/Gewicht: …</li>
-          <li>Farben/Varianten: …</li>
-          <li>Lieferumfang: …</li>
+          <li>Herkunft: Schaffhausen, Thurgau</li>
+          <li>Reben: 10-35 Jahre, nachhaltige Bewirtschaftung</li>
+          <li>Ausbau: Edelstahl und Barrique, 6-12 Monate</li>
+          <li>Alkohol: 12-14% vol</li>
+          <li>Allergene: Enthält Sulfite</li>
         </ul>
       </div>
     </section>
 
-    <!-- KONTAKTFORMULAR BEI INTERESSE -->
+    <!-- FAQ -->
+    <section class="section container faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Wie kann ich bestellen?</summary>
+        <p>Einfach per E-Mail oder über das Formular unten. Wir bestaetigen zeitnah.</p>
+      </details>
+      <details>
+        <summary>Bietet ihr Degustationen an?</summary>
+        <p>Ja, nach Vereinbarung im Weinkeller oder bei Partnerbetrieben.</p>
+      </details>
+      <details>
+        <summary>Versand und Abholung?</summary>
+        <p>Schweizweite Lieferung per Paketdienst, Abholung ab Hof moeglich.</p>
+      </details>
+    </section>
+
+    <!-- KONTAKT -->
     <section id="kontakt" class="section container">
       <div class="card">
-        <h2>Interesse? Melde dich</h2>
-        <p class="muted">Schreib uns eine kurze Nachricht. Wir melden uns so schnell wie moeglich.</p>
-        <!-- Tipp: Ersetze die Formspree‑URL unten mit deiner eigenen. Alternativ kannst du auch einen mailto‑Link verwenden. -->
+        <h2>Kontakt</h2>
+        <p class="muted">Schreib uns eine kurze Nachricht. Wir melden uns schnell.</p>
         <form action="https://formspree.io/f/your-id" method="POST">
           <div class="grid grid-2">
             <div>
@@ -265,7 +257,7 @@
               <input id="name" name="name" placeholder="Dein Name" required />
             </div>
             <div>
-              <label for="email">E‑Mail</label>
+              <label for="email">E-Mail</label>
               <input id="email" name="email" type="email" placeholder="name@beispiel.ch" required />
             </div>
           </div>
@@ -275,20 +267,19 @@
               <input id="telefon" name="telefon" placeholder="+41 79 123 45 67" />
             </div>
             <div>
-              <label for="menge">Stueckzahl (optional)</label>
-              <input id="menge" name="menge" type="number" min="1" placeholder="1" />
+              <label for="menge">Menge (optional)</label>
+              <input id="menge" name="menge" type="number" min="1" placeholder="6" />
             </div>
           </div>
           <div>
             <label for="nachricht">Nachricht</label>
-            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Kurz beschreiben, wofuer du dich interessierst" required></textarea>
+            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Welche Weine interessieren dich?" required></textarea>
           </div>
           <div style="margin:10px 0">
             <label class="small"><input type="checkbox" name="einwilligung" required /> Ich bin einverstanden, dass meine Angaben zur Kontaktaufnahme gespeichert werden.</label>
           </div>
           <button class="btn btn-primary" type="submit">Nachricht senden</button>
-          <p class="small muted">Oder direkt per E‑Mail: <a href="mailto:dein.name@example.com?subject=Anfrage%20zu%20Produktname">dein.name@example.com</a></p>
-          <p class="small muted">Optional: <a href="https://wa.me/41790000000" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a></p>
+          <p class="small muted">Oder direkt per E-Mail: <a href="mailto:weingut@example.com?subject=Anfrage%20Weine">weingut@example.com</a></p>
         </form>
       </div>
     </section>
@@ -296,14 +287,13 @@
 
   <footer>
     <div class="container small">
-      <div>© <span id="year"></span> Dein Unternehmen. Alle Rechte vorbehalten.</div>
+      <div>© <span id="year"></span> Weingut Sonnental. Alle Rechte vorbehalten.</div>
       <div class="small">Impressum · Datenschutz</div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
