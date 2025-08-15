@@ -4,38 +4,74 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>House Wine – Mobiler Ausschank</title>
-  <meta name="description" content="House Wine Ausschankwagen mit Zapfhähnen, ideal für Events, Tastings und Pop-ups." />
-  <meta name="theme-color" content="#6b0f1a" />
+  <meta name="description" content="House Wine: Mobiler Ausschankwagen mit Zapfhaehnen, Glasablage und Stauraum. Ideal fuer Events, Tastings und Pop-ups." />
+  <meta property="og:title" content="House Wine – Mobiler Ausschank" />
+  <meta property="og:description" content="Mobiler Ausschankwagen im edlen Design. Jetzt unverbindlich anfragen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://gilou121.github.io/web/assetshouse-wine.png" />
+  <meta name="theme-color" content="#111111" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#12090c; --card:#1b0e12; --text:#f3f4f6; --muted:#c7c7c7;
-      --brand:#6b0f1a; --accent:#c9a66b; --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.45);
+      --bg:#111111;         /* sehr dunkel, wie der Hintergrund im Foto */
+      --card:#1a1a1a;       /* Kartenhintergrund */
+      --text:#f5f5f5;       /* Haupttext */
+      --muted:#cfcfcf;      /* Sekundaertext */
+      --gold:#c9a66b;       /* Rahmenfarbe des Wagens */
+      --wine:#7a1520;       /* dezentes Weinrot fuer Hover/Buttons */
+      --radius:16px;
+      --shadow:0 12px 36px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
-    body{margin:0; color:var(--text); background:var(--bg); font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; line-height:1.6}
-    a{color:var(--accent); text-decoration:none} a:hover{text-decoration:underline}
-    .container{max-width:980px; margin:0 auto; padding:0 20px}
-    header{position:sticky; top:0; z-index:10; background:rgba(27,14,18,.8); border-bottom:1px solid rgba(201,166,107,.25); backdrop-filter:blur(8px)}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 85% -10%, rgba(201,166,107,.10), transparent),
+        radial-gradient(900px 600px at 10% 0%, rgba(122,21,32,.10), transparent),
+        var(--bg);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height:1.6;
+    }
+    h1,h2,h3{font-family:"Playfair Display", serif; letter-spacing:.2px; margin:0 0 8px}
+    a{color:var(--gold); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1040px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:10;
+      background:rgba(17,17,17,.85);
+      border-bottom:1px solid rgba(201,166,107,.35);
+      backdrop-filter:blur(8px);
+    }
     .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
-    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 18px; border-radius:999px; font-weight:600; border:1px solid rgba(201,166,107,.35); background:rgba(27,14,18,.6); color:var(--text)}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),#8e1a2a); color:#fff}
-    .section{padding:56px 0}
-    .card{background:linear-gradient(180deg, rgba(27,14,18,.9), rgba(27,14,18,.6)); border:1px solid rgba(201,166,107,.25); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
-    .grid{display:grid; gap:20px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .brand-badge{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg, var(--gold), #e0c89a); display:grid; place-items:center; color:#111; font-weight:800; box-shadow:var(--shadow)}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 18px; border-radius:999px; font-weight:600; border:1px solid rgba(201,166,107,.35); background:rgba(26,26,26,.7); color:var(--text); transition:transform .06s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
+    .btn-primary{background:linear-gradient(135deg, var(--gold), #b89257); color:#111; border-color:transparent}
+    .btn-primary:hover{background:linear-gradient(135deg, #d8b97f, var(--gold))}
+    .section{padding:60px 0}
+    .grid{display:grid; gap:22px}
     .grid-2{grid-template-columns:1fr 1fr}
     @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
-    .hero-img{width:100%; height:auto; border-radius:var(--radius); border:1px solid rgba(201,166,107,.25); display:block}
-    h1{margin:10px 0 8px; font-size:clamp(28px,4.5vw,44px)}
-    .lead{color:var(--muted)}
-    input,textarea{width:100%; padding:12px; border-radius:12px; border:1px solid rgba(201,166,107,.35); background:rgba(27,14,18,.5); color:var(--text)}
+    .card{background:linear-gradient(180deg, rgba(42,42,42,.9), rgba(26,26,26,.75)); border:1px solid rgba(201,166,107,.28); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow)}
+    .muted{color:var(--muted)}
+    .hero-img{width:100%; height:auto; display:block; border-radius:var(--radius); border:1px solid rgba(201,166,107,.35); background:#0f0f0f}
+    input,textarea{width:100%; padding:12px; border-radius:12px; border:1px solid rgba(201,166,107,.35); background:rgba(26,26,26,.6); color:var(--text)}
     label{font-weight:600; margin:6px 0; display:block}
-    footer{padding:32px 0 64px; text-align:center; color:var(--muted)}
+    form .grid-2{grid-template-columns:1fr 1fr}
+    @media (max-width:860px){form .grid-2{grid-template-columns:1fr}}
+    footer{padding:36px 0 70px; text-align:center; color:var(--muted)}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div><strong>House Wine</strong></div>
+      <div class="brand">
+        <div class="brand-badge">HW</div>
+        <span>House Wine</span>
+      </div>
       <nav>
         <a class="btn" href="#produkt">Produkt</a>
         <a class="btn btn-primary" href="#kontakt">Kontakt</a>
@@ -44,7 +80,7 @@
   </header>
 
   <main>
-    <!-- PRODUKT -->
+    <!-- PRODUKT: Bild + Kurzbeschreibung -->
     <section id="produkt" class="section container">
       <div class="grid grid-2">
         <div>
@@ -52,13 +88,13 @@
         </div>
         <div class="card">
           <h1>House Wine – Mobiler Ausschank</h1>
-          <p class="lead">
-            Robuster Wagen mit drei Zapfhähnen, Glasablage und Stauraum. Ideal für Events, Pop-ups und Tastings.
+          <p class="muted">
+            Robuster Wagen mit drei Zapfhaehnen, Glasablage und grosszuegigem Stauraum. Ideal fuer Events, Pop-ups und Tastings. Der goldene Rahmen setzt elegante Akzente und passt in jedes hochwertige Ambiente.
           </p>
           <ul>
-            <li>Kapazität: bis 30 Flaschen</li>
-            <li>Rollen mit Feststellern, schnell einsatzbereit</li>
-            <li>Optional: Branding in deiner CI</li>
+            <li>Kapazitaet: bis 30 Flaschen</li>
+            <li>Rollen mit Feststellern, sofort einsatzbereit</li>
+            <li>Optionales Branding in deiner CI</li>
           </ul>
           <p><a class="btn btn-primary" href="#kontakt">Interesse? Nachricht senden</a></p>
         </div>
@@ -69,7 +105,7 @@
     <section id="kontakt" class="section container">
       <div class="card">
         <h2>Kontakt</h2>
-        <p class="lead">Kurze Nachricht schicken – wir melden uns schnell.</p>
+        <p class="muted">Kurze Nachricht schicken – wir melden uns schnell.</p>
         <form action="https://formspree.io/f/your-id" method="POST">
           <div class="grid grid-2">
             <div>
@@ -99,7 +135,7 @@
             <label><input type="checkbox" name="einwilligung" required /> Einwilligung zur Kontaktaufnahme</label>
           </p>
           <button class="btn btn-primary" type="submit">Nachricht senden</button>
-          <p class="lead" style="font-size:14px">Oder E-Mail an: <a href="mailto:weingut@example.com?subject=Anfrage%20House%20Wine">weingut@example.com</a></p>
+          <p class="muted" style="font-size:14px">Oder direkt per E-Mail: <a href="mailto:weingut@example.com?subject=Anfrage%20House%20Wine">weingut@example.com</a></p>
         </form>
       </div>
     </section>
@@ -109,6 +145,6 @@
     <div class="container">© <span id="year"></span> House Wine · Impressum · Datenschutz</div>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>document.getElementById("year").textContent=new Date().getFullYear()</script>
 </body>
 </html>
